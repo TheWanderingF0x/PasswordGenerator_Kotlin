@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">
+        Password <br />
+        Generator
+    </string>
+    <string name="pass">Password</string>
+    <string name="genr">Generate</string>
+    <string name="cp">Copy</string>
+    <string name="pass_lenght">Set Password Length</string>
+    <string name="enter_number_between_10_1000">Enter a number between 10–999</string>
+</resources>

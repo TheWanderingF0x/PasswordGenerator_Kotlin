@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">
+        Password <br />
+        Generator
+    </string>
+    <string name="pass">Password</string>
+    <string name="genr" translatable="false">Generate</string>
+    <string name="cp" translatable="false">Copy</string>
+    <string name="pass_lenght" translatable="false">Set Password Length</string>
+    <string name="enter_number_between_10_1000" translatable="false">Enter number between 10–999</string>
+</resources>
