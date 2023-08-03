@@ -1,5 +1,5 @@
 package com.thewanderingfox.passgenkotlin
-// this is for a commit
+
 import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
