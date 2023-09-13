@@ -8,12 +8,12 @@
 
     <EditText
         android:id="@+id/txbCharLength"
-        android:layout_width="363dp"
-        android:layout_height="51dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="monospace"
         android:gravity="center"
         android:hint="@string/enter_number_between_10_1000"
@@ -27,12 +27,12 @@
 
     <TextView
         android:id="@+id/tvPassword"
-        android:layout_width="389dp"
-        android:layout_height="219dp"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
         android:layout_below="@+id/txbCharLength"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="monospace"
         android:gravity="center"
         android:hint="@string/pass"
@@ -41,7 +41,7 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txbCharLength"
+        app:layout_constraintTop_toBottomOf="@+id/Letters"
         tools:ignore="TextContrastCheck" />
 
     <Button
@@ -51,7 +51,7 @@
         android:layout_below="@+id/tvPassword"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:text="@string/genr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -71,6 +71,40 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGenerate"
-        app:layout_constraintVertical_bias="0.165" />
+        app:layout_constraintVertical_bias="0.069" />
+
+    <CheckBox
+        android:id="@+id/Letters"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:text="Letters"
+        app:layout_constraintEnd_toStartOf="@+id/Numbers"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txbCharLength" />
+
+    <CheckBox
+        android:id="@+id/Numbers"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="32dp"
+        android:text="Numbers"
+        app:layout_constraintBottom_toTopOf="@+id/tvPassword"
+        app:layout_constraintEnd_toStartOf="@+id/Symbols"
+        app:layout_constraintTop_toBottomOf="@+id/txbCharLength"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <CheckBox
+        android:id="@+id/Symbols"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Symbols"
+        app:layout_constraintBottom_toTopOf="@+id/tvPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txbCharLength"
+        app:layout_constraintVertical_bias="0.466" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

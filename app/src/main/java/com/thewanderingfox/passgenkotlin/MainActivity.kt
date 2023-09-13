@@ -1,11 +1,12 @@
 package com.thewanderingfox.passgenkotlin
-// this is for a commit
+
 import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -19,11 +20,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnGenerate: Button
     private lateinit var btnCopy: Button
     private lateinit var txbCharLength: EditText
+    private lateinit var numbers: CheckBox
+    private lateinit var letters: CheckBox
+    private lateinit var symbols: CheckBox
 
     private lateinit var myClipboard: ClipboardManager
     private lateinit var myClip: ClipData
 
-    @SuppressLint("VisibleForTests")
+    @SuppressLint("VisibleForTests", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,6 +36,11 @@ class MainActivity : AppCompatActivity() {
         btnGenerate = findViewById(R.id.btnGenerate)
         btnCopy = findViewById(R.id.btnCopy)
         txbCharLength = findViewById(R.id.txbCharLength)
+
+        numbers = findViewById(R.id.Numbers)
+        letters = findViewById(R.id.Letters)
+        symbols = findViewById(R.id.Symbols)
+
 
         btnGenerate.setOnClickListener {
             val value = txbCharLength.text.toString()
