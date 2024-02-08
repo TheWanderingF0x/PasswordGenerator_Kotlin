@@ -10,12 +10,18 @@ This Kotlin-based Android app generates random strings of user-defined lengths, 
 - Allows you to exclude similar-looking characters for better readability (optional).
 - Copies generated strings to the clipboard with a single tap.
 - Simple and intuitive user interface.
+- Light and Dark modes available depending of the phone current theme.
 
 ## Planned features:
 
 * "Exclude similar characters" box if you prefer more visually distinct strings;
 * Option to select which characters to be used (numbers, uppercase letters, lowercase letters, symbols);
 * Option to be generated as QR Code and saved on the device.
+
+## Screenshots of the app
+
+![](https://imgpile.com/images/xq9Mcr.jpg)
+![](https://imgpile.com/images/xq9JBR.jpg)
 
 ## Building and Running:
 
