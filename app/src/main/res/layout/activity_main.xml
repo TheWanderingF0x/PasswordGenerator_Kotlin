@@ -34,8 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-        android:scrollbarStyle="outsideOverlay"
-        >
+        android:scrollbarStyle="outsideOverlay">
 
         <TextView
             android:id="@+id/tvPassword"
@@ -48,9 +47,7 @@
             android:fillViewport="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TextContrastCheck"
-            />
-
+            tools:ignore="TextContrastCheck" />
     </ScrollView>
 
     <Button
@@ -120,12 +117,6 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="120dp"
             android:text="UpLetters" />
-
-
-
-
-
-
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

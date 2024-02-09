@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var upletters: CheckBox
     private lateinit var lowletters: CheckBox
     private lateinit var symbols: CheckBox
-
     private lateinit var myClipboard: ClipboardManager
     private lateinit var myClip: ClipData
 
@@ -42,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         upletters = findViewById(R.id.UpLetters)
         lowletters = findViewById(R.id.LowLetters)
         symbols = findViewById(R.id.Symbols)
-
 
         btnGenerate.setOnClickListener {
             val value = txbCharLength.text.toString()
