@@ -25,12 +25,16 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
-
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="350dp"
         android:layout_height="300dp"
         android:layout_marginTop="30dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        android:scrollbarStyle="outsideOverlay">
 
         <TextView
             android:id="@+id/tvPassword"
@@ -43,9 +47,7 @@
             android:fillViewport="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TextContrastCheck"
-            />
-
+            tools:ignore="TextContrastCheck" />
     </ScrollView>
 
     <Button
@@ -76,7 +78,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGenerate"
         app:layout_constraintVertical_bias="0.069" />
-
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -116,5 +117,6 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="120dp"
             android:text="UpLetters" />
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
