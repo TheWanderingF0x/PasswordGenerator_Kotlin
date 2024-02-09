@@ -21,8 +21,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnCopy: Button
     private lateinit var txbCharLength: EditText
     private lateinit var numbers: CheckBox
+
     private lateinit var upletters: CheckBox
     private lateinit var lowletters: CheckBox
+    private lateinit var letters: CheckBox
     private lateinit var symbols: CheckBox
 
     private lateinit var myClipboard: ClipboardManager
