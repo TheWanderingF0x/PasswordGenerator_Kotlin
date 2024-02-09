@@ -1,4 +1,4 @@
-# Android Password Generator
+# Password Generator
 
 This Kotlin-based Android app generates random strings of user-defined lengths, serving as a versatile tool for various purposes. It prioritizes privacy by keeping all data local and not requiring an internet connection. Additionally, it offers a convenient function to copy generated strings directly to your clipboard.
 
