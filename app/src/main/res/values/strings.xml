@@ -8,4 +8,8 @@
     <string name="cp">Copy</string>
     <string name="pass_lenght">Set Password Length</string>
     <string name="enter_number_between_10_1000">Enter a number between 10–999</string>
+    <string name="lowletters">LowLetters</string>
+    <string name="symbols">Symbols</string>
+    <string name="numbers">Numbers</string>
+    <string name="upletters">UpLetters</string>
 </resources>

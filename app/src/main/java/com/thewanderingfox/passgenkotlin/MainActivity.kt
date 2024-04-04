@@ -3,6 +3,7 @@ package com.thewanderingfox.passgenkotlin
 import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
@@ -13,6 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Random
 import kotlin.text.toCharArray
+import android.view.inputmethod.InputMethodManager
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +43,33 @@ class MainActivity : AppCompatActivity() {
         upletters = findViewById(R.id.UpLetters)
         lowletters = findViewById(R.id.LowLetters)
         symbols = findViewById(R.id.Symbols)
+
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+
+
+        fun getPassword(length: Int, charSets: List<CharArray>): String {
+            val stringBuilder = StringBuilder()
+
+            // Combine all character sets into a single list
+            val allChars = charSets.flatMap { it.toList() }
+
+            // Handle potential empty character sets
+            if (allChars.isEmpty()) {
+                Toast.makeText(applicationContext, "No character sets selected!", Toast.LENGTH_SHORT).show()
+                return ""
+            }
+
+            val rand = Random()
+
+            // Iterate until desired password length is reached
+            for (i in 0 until length) {
+                val index = rand.nextInt(allChars.size)
+                stringBuilder.append(allChars[index])
+            }
+
+            return stringBuilder.toString()
+        }
 
         btnGenerate.setOnClickListener {
             val value = txbCharLength.text.toString()
@@ -72,6 +101,10 @@ class MainActivity : AppCompatActivity() {
             // Toast notification
             Toast.makeText(applicationContext, "Password generated!", Toast.LENGTH_SHORT).show()
 
+            // Hide the keyboard
+            val view = currentFocus ?: return@setOnClickListener // Exit if no view has focus
+            imm.hideSoftInputFromWindow(view.windowToken, 0)
+
         }
         btnCopy.setOnClickListener {
             myClipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
@@ -80,27 +113,7 @@ class MainActivity : AppCompatActivity() {
             myClipboard.setPrimaryClip(myClip)
             Toast.makeText(applicationContext, "Password Copied", Toast.LENGTH_SHORT).show()
         }
-    }
-    private fun getPassword(length: Int, charSets: List<CharArray>): String {
-        val stringBuilder = StringBuilder()
 
-        // Combine all character sets into a single list
-        val allChars = charSets.flatMap { it.toList() }
 
-        // Handle potential empty character sets
-        if (allChars.isEmpty()) {
-            Toast.makeText(applicationContext, "No character sets selected!", Toast.LENGTH_SHORT).show()
-            return ""
-        }
-
-        val rand = Random()
-
-        // Iterate until desired password length is reached
-        for (i in 0 until length) {
-            val index = rand.nextInt(allChars.size)
-            stringBuilder.append(allChars[index])
-        }
-
-        return stringBuilder.toString()
     }
 }
