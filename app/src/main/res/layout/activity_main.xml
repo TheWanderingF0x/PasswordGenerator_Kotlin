@@ -29,6 +29,7 @@
         android:id="@+id/scrollView"
         android:layout_width="350dp"
         android:layout_height="300dp"
+
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:scrollbarStyle="outsideOverlay"
@@ -41,6 +42,7 @@
             android:id="@+id/tvPassword"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
+
             android:background="#FFFFFF"
             android:fillViewport="true"
             android:fontFamily="monospace"
@@ -55,6 +57,7 @@
 
     <Button
         android:id="@+id/btnGenerate"
+
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -64,6 +67,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btnCopy"
         app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <Button
@@ -90,10 +94,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGenerate"
+        app:layout_constraintVertical_bias="0.069" />
         app:layout_constraintTop_toBottomOf="@+id/txbCharLength">
 
         <CheckBox
             android:id="@+id/Numbers"
+
             android:layout_width="140dp"
             android:layout_height="48dp"
             android:layout_marginBottom="20dp"
@@ -113,9 +120,11 @@
             android:layout_marginTop="48dp"
             android:text="@string/lowletters" />
 
+
         <CheckBox
             android:id="@+id/UpLetters"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_marginStart="140dp"
             android:layout_marginTop="48dp"

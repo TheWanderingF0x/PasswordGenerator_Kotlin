@@ -70,7 +70,6 @@ class MainActivity : AppCompatActivity() {
 
             return stringBuilder.toString()
         }
-
         btnGenerate.setOnClickListener {
             val value = txbCharLength.text.toString()
             var length = 10
@@ -104,7 +103,6 @@ class MainActivity : AppCompatActivity() {
             // Hide the keyboard
             val view = currentFocus ?: return@setOnClickListener // Exit if no view has focus
             imm.hideSoftInputFromWindow(view.windowToken, 0)
-
         }
         btnCopy.setOnClickListener {
             myClipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
@@ -113,7 +111,5 @@ class MainActivity : AppCompatActivity() {
             myClipboard.setPrimaryClip(myClip)
             Toast.makeText(applicationContext, "Password Copied", Toast.LENGTH_SHORT).show()
         }
-
-
     }
 }
